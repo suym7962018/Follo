@@ -1,0 +1,215 @@
+@media screen and (max-width:1200px) {
+	.col-lg {
+		width: 90%;
+	}
+
+	.top {}
+}
+
+@media screen and (max-width:992px) {
+	.col-md {
+		width: 80%;
+	}
+
+	.banner-bg {
+		display: none;
+	}
+}
+
+@media screen and (max-width:768px) {
+
+	.col-sm {
+		width: 70%;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	/* 文字 */
+	.box-3 {
+		height: auto;
+	}
+
+	.box-3-tex {
+		width: 100%;
+		float: none;
+	}
+
+
+	.box-3-tex h4 {
+		margin: 0 auto;
+		width: 200px;
+		font-size: 14px;
+		color: rgba(155, 155, 155, 1);
+		text-align: center;
+		margin-top: 20px;
+
+	}
+
+	.box-3-tex h3 {
+		text-align: center;
+	}
+
+	.box-3-tex h1 {
+		text-align: center;
+	}
+
+	.box-3-tex span {
+		margin: auto;
+		margin-top: 20px;
+	}
+
+	/* 图标 */
+	.box-4 {
+		height: auto;
+	}
+
+	.box-4-icon {
+		width: 100%;
+		float: none;
+	}
+
+	.box-4-icon h4 {
+		max-width: none;
+		width: 100%;
+		font-size: 14px;
+		color: rgba(155, 155, 155, 1);
+		font-weight: 400;
+
+	}
+
+	.box-4-icon span {
+		margin: 0 auto;
+		margin-top: 100px;
+	}
+
+	.images {
+	}
+
+	.img-dongtai {
+	}
+
+	.box-founder{ width:90%; margin: 20px auto; width: 88%;float: initial;}
+	.box-founder:last-child{ margin-right: auto;}
+	.box-8-tex{ width:100%;}
+	.box-8-tex img{ width: 230px; height: 230px; float: initial;}
+	.cology{
+		transform: scale(0.5);
+		-webkit-transform:  scale(0.5);
+		-moz-transform: scale(0.5);
+		margin-left: -35%;
+		margin-top: -50%;}
+	.cology-tex{ float: left; width: 100%; background-size: 100% 100%;}
+	.cology-tex .biaoti{height: auto; margin-top:auto; text-align: center; width:100%;}
+	.biaoti h1{ padding-top:10px;}
+	.cology-tex .wenzi{ height:auto; margin-top: auto; width:100%;}
+	.box-4 div{ width:100%; margin-left: 0;margin-top: 20px;}
+	.box-9-bg{ padding:0; padding-top: 20px; box-sizing: border-box;}
+	.box-9-bg ul li{ -width:30%; display: none;}
+	.box-9-bg ul li:last-child{display: block;  text-align: center;margin-left: -12%;}
+	.box-9-bg ul li:last-child h5{ text-align: center}
+	.box-9-bg .icons img{ -width:20px;}
+	.cology-tex .wenzi p{ width:200px;}
+	.box-founder p{ text-align: center;}
+	.box-8-tex{ display: block; text-align: center;height: auto; padding-bottom: 20px;}
+	.box-8-tex .rightbox{ margin-top: 0; float: initial; width:95%; margin: 0 auto;margin-top: -35px;}
+
+	.box-8-tex h3{ padding-top: 0; text-align: center;}
+	.box-8-tex h2{ text-align: center;}
+	.box-8-tex p{ text-align: center;}
+	.follo-box p{writing-mode: tb-rl;}
+		/* 使用案列 */
+	.box-6 {
+		height: auto;
+	}
+
+	.box-6-tex {
+		float: none;
+		width: 100%;
+	}
+
+	.box-6-tex h3 {}
+
+	.box-6-tex span {
+		width: 100%;
+
+	}
+
+	.box-7-route {
+
+	}
+
+	/* 路线图片 */
+	.route {
+		max-width: none;
+		width: 100%;
+	}
+
+	.route-img {
+		float: none;
+		width: 100%;
+		margin-top: 0px;
+		left: 0;
+	}
+
+	.route-img .img {
+		width: 100%;
+		height: 400px;
+	}
+
+	/* 团队成员 */
+	.box-8-tex {
+		max-width: none;
+		width: 90%;
+		margin: 20px auto;
+		float: initial;
+	}
+	.box-8-tex:last-child {
+		 float: initial;
+	}
+	.box-3-tex p{
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width:480px) {
+	.cology-tex .wenzi p{ width:200px;}
+	.col-xs {
+		width: 80%;
+	}
+
+	.top-box {
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+		width: 100%;
+		/* height: 820px; */
+	}
+
+	.banner {
+		/* top: 30%; */
+	}
+
+	.banner h1 img {
+		width: 270px;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	.logo{ display: block; }
+
+	.banner p {
+		width: 100%;
+		font-size: 1.5rem;
+	}
+
+	.banner-bg img {
+		width: 260px;
+	}
+
+
+}
