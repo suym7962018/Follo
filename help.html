@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/home/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/home/icon.png" type="image/x-icon">
+    <title>Follo | 去中心化的位置大数据平台</title>
+    <link rel="stylesheet" href="assets/css/help.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">   
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+        <nav class="navbar">
+            <div class="navbar-nav">
+                <div class="navbar-brand">
+                    <a href="home.html"><img src="assets/images/home/logo.png" alt="follo"></a>
+                </div>
+                <ul>
+                    <li><a href="pointer.html">市场</a></li>
+                    <li><a href="mypointer-blank.html">我的Pointer</a></li>
+                    <li>
+                        <a href = "javascript:void(0)">
+                            <i class="fas fa-user"></i><sup style="background: transparent;"></sup>
+                        </a>
+                            <ul class="dropdown-menu">
+                                <p style="color: #666666;">Hi, xxx</p>
+                                <p style="color: #9c9c9c;">ID：778899</p>
+                                <hr>
+                                <li><a href = "javascript:void(0)" 
+                                    onclick = "document.getElementById('signup').style.display='block';
+                                    document.getElementById('overlay').style.display='block'" >
+                                    账号</a>
+                                </li>
+                                <li><a href="mypointer.html">交易记录</a></li>
+                                <li><a href="">退出</a></li>
+                            </ul>
+    
+                    </li>                  
+                    <li><a href=""><i class="fas fa-bell" style="vertical-align: top-text;"></i><sup>5</sup></a>
+                    </li>
+                    <li><a href="#cn" style="color: #FFA600">中文</a>/<a href="#en">EN</a></li>
+                </ul>
+            </div>
+        </nav>
+</header>
+
+<div class="container">
+    <div class="guide">
+        <div class="tab">      
+            <div class="tab-btn active">
+                新手帮助
+            </div>
+            <div class="tab-btn">
+                Follo公告
+            </div>
+        </div>
+        <div class="content show">
+            <div class="half">
+                <hr>
+                <a href="">新手帮助</a>
+                <hr>
+                <a href="">新手帮助</a>
+                <hr>
+                <a href="">新手帮助</a>
+            </div>
+            <div class="half">
+                <hr>
+                <a href="">新手帮助</a>
+                <hr>
+                <a href="">新手帮助</a>
+                <hr>
+                <a href="">新手帮助</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="half">
+                <hr>
+                <a href="">公告</a>
+                <hr>
+                <a href="">公告</a>
+                <hr>
+                <a href="">公告</a>
+            </div>
+            <div class="half">
+                <hr>
+                <a href="">公告</a>
+                <hr>
+                <a href="">公告</a>
+                <hr>
+                <a href="">公告</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-title">
+        <p>社区</p>
+    </div>
+    <div class="footer-icon">
+        <ul>
+            <li><a href=""><i class="fab fa-telegram-plane fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-weixin fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-weibo fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook-f fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-youtube fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-medium-m fa-2x"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-subscribe">
+        <input type="email" placeholder="请输入邮箱" required>
+        <a href="" class="button">订阅</a>
+    </div>
+    <div class="footer-info">
+        <p>联系我们：<a href="">contact@follo.one</a></p>
+        <p>2019 Follo Foundation © All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- 悬浮按钮 -->
+<div class="float-btn">
+    <a href="help.html" class="button"><i class="fas fa-headset"></i> 帮助中心</a>
+</div>
+    
+
+<script>
+    var btnList = document.getElementsByClassName('tab-btn');
+    var contentList = document.getElementsByClassName('content');
+
+    btnList[0].onclick = function() {
+        btnList[0].classList.add("active");
+        btnList[1].classList.remove("active");
+        contentList[0].classList.add("show");
+        contentList[1].classList.remove("show");
+    }
+
+    btnList[1].onclick = function() {
+        btnList[1].classList.add("active");
+        btnList[0].classList.remove("active");
+        contentList[1].classList.add("show");
+        contentList[0].classList.remove("show");
+    }
+
+    window.onscroll = function () {
+        var sl = -Math.max(document.body.scrollLeft, document.documentElement.scrollLeft);
+        document.querySelector('.navbar').style.left = sl+'px';
+    }
+
+</script>
+
+</body>
+</html>

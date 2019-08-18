@@ -1,0 +1,444 @@
+/*-----------------------------------------------------------------------------------*/
+/*	01. GENERAL
+/*-----------------------------------------------------------------------------------*/
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #666666;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    margin:0 auto;
+    width: 100%;
+    height: 86px;
+    /* height: 789px; */
+    /* background-color: #404040; */
+    /* box-shadow: 0 1px 1px #ccc; */
+}
+
+footer {
+    margin:0 auto;
+    min-width: 1140px;
+    width: 100%;
+    height: 428px;
+    background-color: #242935;
+}
+
+.container {
+    width: 1140px;
+    min-width: 1140px;
+    margin: 0 auto;
+    /* background-color: #f1bd69; */
+
+}
+
+.container h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 60px;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	02. NAVIGATION
+/*-----------------------------------------------------------------------------------*/
+.navbar {
+    min-width: 1140px;
+    width: 100%;
+    height: 86px;
+    box-shadow:0px 7px 21px 0px rgba(0,0,0,0.06);
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 9999;
+}
+
+.navbar .navbar-nav {
+    width: 1140px;
+    min-width: 1140px;
+    height: 86px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.navbar .navbar-nav .navbar-brand {
+    width: 50%;
+    /* display: inline-block; */
+    float: left;
+    margin: 20px 10px 20px 10px;
+}
+
+.navbar .navbar-nav ul {
+    margin: 0;
+}
+
+.navbar .navbar-nav ul li {
+    width: auto;
+    padding-left: 5%;
+    float: left;
+    text-align: left;
+    list-style-type: none;
+    display: block;
+}
+
+.navbar .navbar-nav ul li a:hover {
+    color: #FFA600;
+}
+
+.navbar .navbar-nav ul a {
+    line-height: 86px;
+    color: #666666;;
+    text-decoration: none;
+}
+
+.navbar .navbar-nav li {
+    position: relative;
+}
+
+.navbar .navbar-nav li i {
+    font-size: 22px;
+}
+
+.navbar .navbar-nav li sup {
+    background-color: #FFA600;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 0 5px 0 5px; 
+    font-size: 8px;
+}
+
+.navbar .navbar-nav .active a {
+    color: #FFA600;
+}
+
+.navbar .navbar-nav li .dropdown-menu {
+    display: none;
+    z-index: 10;
+    box-shadow:0px 6px 13px 0px rgba(0,0,0,0.12);
+    border-radius: 2px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.navbar .navbar-nav li:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar .navbar-nav li:hover .dropdown-menu li {
+    width: 8rem;
+    padding-left: 20%;
+    padding-right: 20%;
+  
+}
+
+.navbar .navbar-nav li:hover .dropdown-menu li a {
+    line-height: 2.5rem;
+    display: block;
+}
+
+.navbar .navbar-nav li:hover .dropdown-menu li a:hover {
+    color: #FFA600;
+}
+
+.navbar .navbar-nav li:hover .dropdown-menu p {
+    width: 100px;
+    height: 30px;
+    margin: 0px 15px;
+}
+
+.navbar .navbar-nav li:hover .dropdown-menu hr {
+    border: none;
+    border-top: 1px dashed #FFA600;
+    margin: 0;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	03. MYINFO
+/*-----------------------------------------------------------------------------------*/
+.myinfo {
+    width: 1140px;
+    height: 160px;
+    box-shadow:0px 7px 31px 0px rgba(0,0,0,0.08);
+    border-radius:5px;
+    margin: 30px auto;
+    padding: 30px 0 30px 0;
+    display: flex;
+}
+
+.myinfo .poi {
+    width: 480px;
+    height: 160px;
+    background:linear-gradient(180deg,rgba(255,190,35,1) 0%,rgba(225,162,14,1) 100%);
+    box-shadow:0px 7px 31px 0px rgba(0,0,0,0.08);
+    border-radius:5px;
+    margin: auto;
+    padding: 10px 5px 5px 40px;
+}
+
+.myinfo .poi .title {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.myinfo .poi .num {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    text-shadow:0px 2px 4px rgba(183,129,0,1);
+}
+
+.myinfo .poi .button {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 350px;
+}
+
+.myinfo .bonus {
+    width: 480px;
+    height: 160px;
+    background:linear-gradient(180deg,rgba(59,59,59,1) 0%,rgba(27,27,27,1) 100%);
+    box-shadow:0px 7px 31px 0px rgba(0,0,0,0.08);
+    border-radius:5px;  
+    margin: auto;
+    padding: 10px 5px 5px 40px;
+}
+
+.myinfo .bonus .title {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.myinfo .bonus .num {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    text-shadow:0px 2px 4px rgba(0,0,0,0.5);
+}
+/*-----------------------------------------------------------------------------------*/
+/*	04. MYPOI
+/*-----------------------------------------------------------------------------------*/
+.mypoi {
+    width: 100%;
+    /* height: 1000px; */
+    margin-top: 50px;
+    /* border: 1px solid; */
+}
+
+.mypoi p {
+    font-size: 20px;
+    color: #333333;
+}
+
+.mypoi .list {
+
+}
+.mypoi .list i {
+    color: #CFD4F2;
+    margin-top: 100px;
+}
+
+.mypoi .list p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 300px;
+}
+
+.mypoi .card {
+    width: 1080px;
+    height: 360px;
+    box-shadow:0px 7px 31px 0px rgba(0,0,0,0.08);
+    border-radius:5px;
+    /* border: 1px solid; */
+    padding: 30px; 
+    margin: 20px auto;  
+}
+
+.mypoi .content {
+    background-color: #F9FAFF;
+    border-radius: 5px;
+    display: flex;
+}
+
+.mypoi .content .map {
+    background-image: url('../images/pointer/mapdetail.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 400px; 
+    height: 360px;
+    border-radius: 5px;
+}
+
+.mypoi .content .map .line {
+    /* position: absolute; */
+    z-index: 2;
+    display: flex;
+    background-color: #FFC845;
+    /* height: 80px; */
+    margin: auto;
+    border-radius:0px 0px 5px 5px;
+    margin-top: 290px;
+}
+
+.mypoi .content .map .line .left {
+    width: 50%;
+    margin: 10px 0;
+    padding: 0;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 50px;
+    margin-left: 10px;
+}
+
+.mypoi .content .map .line .left i {
+    margin: 0;
+}
+
+.mypoi .content .map .line .right {
+    width: 40%;
+    margin: 10px 0;
+    padding: 0;
+    text-align: left;
+    color: #ffffff;
+    font-size: 32px;
+    text-shadow:0px 2px 4px rgba(96,62,5,0.59);
+    line-height: 50px;
+}
+
+.mypoi .content .text {
+    margin: auto 50px;
+    width: 700px;
+}
+
+.mypoi .content .line {
+    font-size: 14px;
+    display: flex;
+}
+
+.mypoi .content .text .left {
+    width: 15%;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.mypoi .content .text .right {
+    width: 85%;
+    margin: 10px 0;
+    padding: 0;
+    text-align: left;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	05. FOOTER
+/*-----------------------------------------------------------------------------------*/
+.footer-title {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.footer-title p {
+    color: #F2F2F2;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer-icon {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 40px;
+    display: block;
+}
+
+.footer-icon li {
+    text-align: center;
+    display: inline-block;
+    list-style-type: none;
+    width: 50px;
+    margin: 0px 10px 0px 10px;
+}
+
+.footer-icon li i {
+    color: #F2F2F2;
+}
+
+.footer-subscribe {
+    text-align: center;
+    margin-top: 40px;
+    vertical-align: middle;
+}
+
+.footer-subscribe input {
+    width: 400px;
+    height: 40px;
+    font-size: 1rem;
+    text-align: center;
+    outline-color: #FFA600;
+    vertical-align: middle;
+}
+
+.footer-subscribe .button {
+    background-color: #FFC845;
+    border: none;
+    color: white;
+    padding: 11px 60px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: -4.35px;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.footer-subscribe .button:hover {
+    background-color: rgb(216, 166, 50);
+}
+
+.footer-info {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.8rem;
+    color: #999999;
+}
+
+.footer-info a {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.footer-info p:first-child {
+    font-size: 0.8rem;
+    color: #F2F2F2;
+    margin-bottom: 24px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	06. FLOAT BUTTON
+/*-----------------------------------------------------------------------------------*/
+.float-btn {
+    position: fixed; 
+    bottom: 100px;
+    right: 10px;
+}
+
+.float-btn .button{
+    background:linear-gradient(180deg,rgba(255,200,69,1) 0%,rgba(243,172,2,1) 100%);
+    box-shadow:0px 0px 19px 0px rgba(163,111,16,0.27);
+    border-radius:30px;
+    color: #FFFFFF;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}

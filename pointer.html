@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/images/home/icon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/images/home/icon.png" type="image/x-icon">
+        <title>Follo | 去中心化的位置大数据平台</title>
+        <link rel="stylesheet" href="assets/css/pointer.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">   
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+        <!-- Mapbox -->
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+ 
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="navbar-nav">
+            <div class="navbar-brand">
+                <a href="home.html"><img src="assets/images/home/logo.png" alt="follo"></a>
+            </div>
+            <ul>
+                <li class="active"><a href="pointer.html">市场</a></li>
+                <li><a href="mypointer-blank.html">我的Pointer</a></li>
+                <li>
+                    <a href = "javascript:void(0)">
+                        <i class="fas fa-user"></i><sup style="background: transparent;"></sup>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <p style="color: #666666;">Hi, xxx</p>
+                            <p style="color: #9c9c9c;">ID：778899</p>
+                            <hr>
+                            <li><a href = "javascript:void(0)" 
+                                onclick = "document.getElementById('signup').style.display='block';
+                                document.getElementById('overlay').style.display='block'" >
+                                账号</a>
+                            </li>
+                            <li><a href="mypointer.html">交易记录</a></li>
+                            <li><a href="">退出</a></li>
+                        </ul>
+
+                </li>                  
+                <li><a href=""><i class="fas fa-bell" style="vertical-align: top-text;"></i><sup>5</sup></a>
+                </li>
+                <li><a href="#cn" style="color: #FFA600">中文</a>/<a href="#en">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- 倒计时 -->
+<div class="countdown">
+
+    <div class="background">
+        <div class="container">
+            <div class="board">
+                <p class="board-money"><i class="fab fa-ethereum"></i> 345.98767654</p>
+                <p class="board-time">12:45:45</p>
+            </div>
+            <div class="board-shadow"></div>
+        </div>
+
+
+        
+    </div>
+    <div class="ball-sm">
+        <div class="ball-sm-shadow"></div>
+    </div> 
+    <div class="ball-lg">
+        <div class="ball-lg-shadow"></div>
+    </div>
+
+</div>
+
+<!-- 地图 -->
+<div id="map" class="map"></div>
+
+<!-- POI列表 -->
+<header class="pointer">
+    <div class="navbar">
+        <div class="navbar-nav">
+            <!-- <div class="navbar-brand"> -->
+                <h1>Pointer 列表</h1>
+            <!-- </div> -->
+            <ul>
+                <li>国家：
+                    <select name="country" id="country" onchange="getCity()">
+                        <option value ="0">请选择</option>
+                        <option value ="1">德国</option>
+                        <option value ="2">荷兰</option>
+                        <option value ="3">美国</option>
+                        <option value ="4">日本</option>
+                        <option value ="5">土耳其</option>
+                        <option value ="6">新加坡</option>
+                        <option value ="7">印度</option>
+                        <option value ="8">印度尼西亚</option>
+                        <option value ="9">英国</option>
+                        <option value ="10">中国</option>
+                    </select>
+                </li>
+                <li>城市：
+                    <select name="city" id="city">
+                        <option value ="0">请选择</option>
+                    </select>
+                </li>
+                <li>售价：
+                    <select name="" id="">
+                        <option value ="">请选择</option>
+                        <option value ="">从高到低</option>
+                        <option value ="">从低到高</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!-- POI -->
+<div class="container">
+    <div class="poi">
+        <div class="row">
+            <div class="poi-card">
+                <div class="image" style="background-color: #FFC845;width: 260px;height: 250px;">
+                    <p>Owner：Lindsay</p>
+                </div>
+                <div class="top">
+                    <p class="text left">#123456</p>
+                    <p class="text right">619157.2㎡</p>
+                    <p class="text left">国家</p>
+                    <p class="text right">中国</p>
+                    <p class="text left">城市</p>
+                    <p class="text right">上海</p>
+                </div>
+                <div class="bottom">
+                    <p class="price left">9.75</p>
+                    <p class="unit right">ETH</p>
+                    <a  href = "javascript:void(0)" 
+                    onclick = "document.getElementById('window').style.display='block';
+                    document.getElementById('overlay').style.display='block'" 
+                    class="poi-button">立即购买</a> 
+                </div>    
+            </div>
+
+            <div class="poi-card">
+                <div class="image" style="background-color: #FFC845;width: 260px;height: 250px;">
+                    <p>Owner：Lindsay</p>
+                </div>
+                <div class="top">
+                    <p class="text left">#123456</p>
+                    <p class="text right">619157.2㎡</p>
+                    <p class="text left">国家</p>
+                    <p class="text right">中国</p>
+                    <p class="text left">城市</p>
+                    <p class="text right">上海</p>
+                </div>
+                <div class="bottom">
+                    <p class="price left">9.75</p>
+                    <p class="unit right">ETH</p>
+                    <a  href = "javascript:void(0)" 
+                    onclick = "document.getElementById('window').style.display='block';
+                    document.getElementById('overlay').style.display='block'" 
+                    class="poi-button">立即购买</a> 
+                </div>    
+            </div>
+
+            <div class="poi-card">
+                <div class="image" style="background-color: #FFC845;width: 260px;height: 250px;">
+                    <p>Owner：Lindsay</p>
+                </div>
+                <div class="top">
+                    <p class="text left">#123456</p>
+                    <p class="text right">619157.2㎡</p>
+                    <p class="text left">国家</p>
+                    <p class="text right">中国</p>
+                    <p class="text left">城市</p>
+                    <p class="text right">上海</p>
+                </div>
+                <div class="bottom">
+                    <p class="price left">9.75</p>
+                    <p class="unit right">ETH</p>
+                    <a  href = "javascript:void(0)" 
+                    onclick = "document.getElementById('window').style.display='block';
+                    document.getElementById('overlay').style.display='block'" 
+                    class="poi-button">立即购买</a> 
+                </div>    
+            </div>
+
+            <div class="poi-card">
+                <div class="image" style="background-color: #FFC845;width: 260px;height: 250px;">
+                    <p>Owner：Lindsay</p>
+                </div>
+                <div class="top">
+                    <p class="text left">#123456</p>
+                    <p class="text right">619157.2㎡</p>
+                    <p class="text left">国家</p>
+                    <p class="text right">中国</p>
+                    <p class="text left">城市</p>
+                    <p class="text right">上海</p>
+                </div>
+                <div class="bottom">
+                    <p class="price left">9.75</p>
+                    <p class="unit right">ETH</p>
+                    <a  href = "javascript:void(0)" 
+                    onclick = "document.getElementById('window').style.display='block';
+                    document.getElementById('overlay').style.display='block'" 
+                    class="poi-button">立即购买</a> 
+                </div>    
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="poi-card">
+                <div class="image" style="background-color: #FFC845;width: 260px;height: 250px;">
+                    <p>Owner：Lindsay</p>
+                </div>
+                <div class="top">
+                    <p class="text left">#123456</p>
+                    <p class="text right">619157.2㎡</p>
+                    <p class="text left">国家</p>
+                    <p class="text right">中国</p>
+                    <p class="text left">城市</p>
+                    <p class="text right">上海</p>
+                </div>
+                <div class="bottom">
+                    <p class="price left">9.75</p>
+                    <p class="unit right">ETH</p>
+                    <a  href = "javascript:void(0)" 
+                    onclick = "document.getElementById('window').style.display='block';
+                    document.getElementById('overlay').style.display='block'" 
+                    class="poi-button">立即购买</a> 
+                </div>    
+            </div>
+
+            <div class="poi-card">
+                <div class="image" style="background-color: #FFC845;width: 260px;height: 250px;">
+                    <p>Owner：Lindsay</p>
+                </div>
+                <div class="top">
+                    <p class="text left">#123456</p>
+                    <p class="text right">619157.2㎡</p>
+                    <p class="text left">国家</p>
+                    <p class="text right">中国</p>
+                    <p class="text left">城市</p>
+                    <p class="text right">上海</p>
+                </div>
+                <div class="bottom">
+                    <p class="price left">9.75</p>
+                    <p class="unit right">ETH</p>
+                    <a  href = "javascript:void(0)" 
+                    onclick = "document.getElementById('window').style.display='block';
+                    document.getElementById('overlay').style.display='block'" 
+                    class="poi-button">立即购买</a> 
+                </div>    
+            </div>
+
+            <div class="poi-card">
+                <div class="image" style="background-color: #FFC845;width: 260px;height: 250px;">
+                    <p>Owner：Lindsay</p>
+                </div>
+                <div class="top">
+                    <p class="text left">#123456</p>
+                    <p class="text right">619157.2㎡</p>
+                    <p class="text left">国家</p>
+                    <p class="text right">中国</p>
+                    <p class="text left">城市</p>
+                    <p class="text right">上海</p>
+                </div>
+                <div class="bottom">
+                    <p class="price left">9.75</p>
+                    <p class="unit right">ETH</p>
+                    <a  href = "javascript:void(0)" 
+                    onclick = "document.getElementById('window').style.display='block';
+                    document.getElementById('overlay').style.display='block'" 
+                    class="poi-button">立即购买</a> 
+                </div>    
+            </div>
+
+            <div class="poi-card">
+                <div class="image" style="background-color: #FFC845;width: 260px;height: 250px;">
+                    <p>Owner：Lindsay</p>
+                </div>
+                <div class="top">
+                    <p class="text left">#123456</p>
+                    <p class="text right">619157.2㎡</p>
+                    <p class="text left">国家</p>
+                    <p class="text right">中国</p>
+                    <p class="text left">城市</p>
+                    <p class="text right">上海</p>
+                </div>
+                <div class="bottom">
+                    <p class="price left">9.75</p>
+                    <p class="unit right">ETH</p>
+                    <a  href = "javascript:void(0)" 
+                    onclick = "document.getElementById('window').style.display='block';
+                    document.getElementById('overlay').style.display='block'" 
+                    class="poi-button">立即购买</a> 
+                </div>    
+            </div>
+        </div>
+
+        <div class="pagination">
+            <ul>
+                <li><a href="#">«</a></li>
+                <li><a href="#">1</a></li>
+                <li><a class="active" href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">»</a></li>
+            </ul>
+            <p style="width: 10%;">共7页</p>
+            <p>跳转到第 <input type="text"> 页</p>
+            <a href="" class="button">跳转</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- 详情弹窗 -->
+<div id="window" class="detail">
+    <a href = "javascript:void(0)" 
+    onclick = "document.getElementById('window').style.display='none';
+    document.getElementById('overlay').style.display='none'">
+        <i class="fas fa-times fa-2x"></i>
+    </a>
+    <div class="title">
+        <p>#092023 (Apple, Computer, Science)</p>
+        <a href="">0x878798237087897789274873827478723</a>
+    </div>
+    <div class="content">
+        <div id="map-detail" class="map"></div>
+        <div class="text">
+            <p style="font-size: 20px;">您将从 <span>Lindsay</span> 手中购买Pointer，价格为0.2000ETH。下次的售价为0.4000ETH</p>
+            <div class="country">
+                <p class="left">国家：</p>
+                <p class="right">中国</p>
+            </div>
+            <div class="city">
+                <p class="left">城市：</p>
+                <p class="right">上海</p>
+            </div>
+            <div class="intro">
+                <p class="left">简介：</p>
+                <p class="right">简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介</p>
+            </div>
+        </div>
+    </div>
+    <div class="buy">
+        <p>0.2000 ETH</p>
+        <a href="" class="button">立即购买</a>
+    </div>
+</div>
+
+<!-- 注册弹窗 -->
+<div id="signup" class="signup">
+    <a href = "javascript:void(0)" 
+    onclick = "document.getElementById('signup').style.display='none';
+    document.getElementById('overlay').style.display='none'">
+        <i class="fas fa-times fa-2x"></i>
+    </a>
+    <h2>用户信息</h2>
+    <form action="">
+        <p>公钥地址</p>
+        <input id="account" type="text" value="0x123456789123456789123456789" disabled>
+        <p>昵称</p>
+        <input type="text" placeholder="请输入昵称">
+        <p>邮箱地址</p>
+        <input type="text" placeholder="请输入邮箱地址">
+        <label>
+            是否开启邮件提醒
+            <input class="switch" type="checkbox">
+        </label>
+        
+        <input type="submit" value="保存" class="button">
+    </form>
+</div>
+
+<!-- 新手弹窗 -->
+<div id="rookie" class="rookie">
+    <!-- <hr> -->
+    <div class="title">你被特别邀请了</div>
+    <div class="content">
+        <p style="padding-top: 100px; font-size: 18px; margin-bottom: 50px;">请通过MetaMask登录Follo</p>
+        <a href="" class="button">我是MetaMask的新手</a>
+        <p style="margin-top: 40px;">*通过单击“我是MetaMask的新手”</p>
+        <p>您将被重定向到MetaMask以创建账户</p>
+    </div>
+
+    <div class="decoration1"><img src="assets/images/pointer/F1.png" alt=""></div>
+    <div class="decoration2"><img src="assets/images/pointer/F2.png" alt=""></div>
+    <div class="decoration3"><img src="assets/images/pointer/F3.png" alt=""></div>
+    <div class="decoration4"><img src="assets/images/pointer/F4.png" alt=""></div>
+    <div class="decoration5"><img src="assets/images/pointer/F5.png" alt=""></div>
+    <div class="decoration6"><img src="assets/images/pointer/F6.png" alt=""></div>
+    <div class="decoration7"><img src="assets/images/pointer/F7.png" alt=""></div>
+    <div class="decoration8"><img src="assets/images/pointer/F8.png" alt=""></div>
+    <div class="decoration9"><img src="assets/images/pointer/F9.png" alt=""></div>
+
+    <div class="cancel">
+        <a href = "javascript:void(0)" 
+        onclick = "document.getElementById('rookie').style.display='none';
+        document.getElementById('overlay').style.display='none'">
+            <i class="fas fa-times-circle fa-3x"></i>
+        </a>
+    </div>
+    
+</div>
+    
+<!-- 黑色遮盖 -->
+<div id="overlay" class="overlay"></div>
+
+
+<footer>
+    <div class="footer-title">
+        <p>社区</p>
+    </div>
+    <div class="footer-icon">
+        <ul>
+            <li><a href=""><i class="fab fa-telegram-plane fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-weixin fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-weibo fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook-f fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-youtube fa-2x"></i></a></li>
+            <li><a href=""><i class="fab fa-medium-m fa-2x"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-subscribe">
+        <input type="email" placeholder="请输入邮箱" required>
+        <a href="" class="button">订阅</a>
+    </div>
+    <div class="footer-info">
+        <p>联系我们：<a href="">contact@follo.one</a></p>
+        <p>2019 Follo Foundation © All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- 悬浮按钮 -->
+<div class="float-btn">
+    <a href="help.html" class="button"><i class="fas fa-headset"></i> 帮助中心</a>
+</div>
+
+    
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+<script src="assets/js/pointer.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@0.20.6/dist/web3.js"></script>
+
+<script>
+    var rookie = document.getElementById('rookie'),
+        overlay = document.getElementById('overlay'),
+        signup = document.getElementById('signup'),
+        userAccount = document.getElementById('account');
+        
+    window.addEventListener('load', function() {
+        //检测浏览器是否有web3插件
+        if(typeof web3 !== 'undefined') {
+            web3Provider = web3.currentProvider;
+            web3 = new Web3(web3Provider);
+
+            //检测是否安装metamask插件
+            if(web3.currentProvider.isMetaMask) {
+                console.log('The injected provider is from MetaMask！');
+                //检测账号是否已退出
+                if (!web3.eth.coinbase) {
+                    window.alert('Please LOGIN MetaMask first and SHARE the address.');
+                } 
+                else {
+                    console.log('MetaMask is Login.');
+                    signup.style.display = 'block';
+                    overlay.style.display = 'block';
+                    userAccount.value = web3.eth.accounts[0];
+                    console.log(web3.eth.accounts);
+                }
+            }
+            else {
+                console.log('You need to use MetaMask!')
+                rookie.style.display = 'block';
+                overlay.style.display = 'block';
+            }
+        }
+        else {
+            console.log('No web3? You should consider trying MetaMask!')
+            rookie.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+    });
+
+    window.onscroll = function () {
+        var sl = -Math.max(document.body.scrollLeft, document.documentElement.scrollLeft);
+        document.querySelector('.navbar').style.left = sl+'px';
+    }
+</script>
+</body>
+</html>
